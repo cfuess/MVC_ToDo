@@ -1,0 +1,18 @@
+﻿@model MVC_ToDo.Models.Todos
+
+@{
+	ViewBag.Title = "To-dos";
+}
+
+<h2>To-do List</h2>
+<section>
+@foreach (var item in Model.Items)
+{
+	<div class="form-group">
+		<label>
+			<input type="checkbox">
+			@item.Title
+		</label>
+	</div>
+}
+</section>
